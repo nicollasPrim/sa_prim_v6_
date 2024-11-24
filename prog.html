@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-prog.css">
+    <link rel="shortcut icon" href="home.svg" type="image/x-icon">
+    <script src="script.js" defer></script>
+    <script src="script2.js" defer></script>
+    <script src="script3.js" defer></script>
+    <script src="script4.js" defer></script>
+    <script src="script5.js" defer></script>
+    <script src="script6.js" defer></script>
+    <script src="mostrador.js" defer></script>
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="cab-especial">
+            <img class="logo" src="home.svg" alt="logo_site">
+        </a>
+        <nav>
+            <a class="cab" href="index.html">Home</a>
+            <a class="cab" href="cont.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Programação</h1> <hr>
+        <section id="questProva1" class="programacao">
+            <h2>Prova - questão 1</h2>
+            <div class="buttons">
+                <button onclick="ex1()">Calcular</button>
+                <button onclick="mostra()">Mostrar Código</button>
+            </div>
+            <code id="aparece">
+                <pre >
+let res1 = document.getElementById('res1')
+let res11 = document.getElementById('res11')
+
+function geraRand(max, min){
+    let valr = Math.floor(Math.random() * (20 - 1 + 1) + 1)
+    return valr
+}
+
+aparece.style.display = 'none'
+
+function mostra(){
+    aparece.style.display = 'flex'
+}
+
+let arr1 = [0, 0, 0, 0, 0, 0, 0]
+let aux1 = []
+
+function coloca1(){
+    for(let j=arr1.length; j>0; j--){
+        for(let i=0; i < arr1.length-1; i++){
+            arr1[i] = geraRand(20, 1)
+            }
+            console.log(arr1)
+    }
+}
+
+coloca1()
+
+function ex1(){
+    res1.innerHTML = `Array desordenada: ${arr1}`
+    console.log(arr1)
+    for(j=arr1.length; j>0; j--){
+        for(i=0; i < arr1.length-1; i++){
+            if(arr1[i] > arr1[i+1]){
+                aux1 = arr1[i]
+                arr1[i] = arr1[i+1]
+                arr1[i+1] = aux1
+            }
+            console.log(arr1)
+        }
+    }
+    res11.innerHTML = `Array ordenada: ${arr1}`
+}                    
+                </pre>
+            </code>
+            <code>
+                <pre id="res1"></pre>
+                <pre id="res11"></pre>
+            </code>
+        </section>
+
+        <br>
+
+        <section id="questProva2" class="programacao">
+            <h2>Prova - questão 2</h2>
+            <div class="buttons">
+                <button onclick="ex2()">Calcular</button>
+                <button onclick="mostra2()">Mostrar Código</button>
+            </div>
+            <code id="aparece2">
+                <pre>
+let res2 = document.getElementById('res2')
+let res22 = document.getElementById('res22')
+
+let arr = [0, 0, 0, 0, 0, 0, 0]
+let aux = []
+
+aparece2.style.display = 'none'
+
+function mostra2(){
+    aparece2.style.display = 'flex'
+}
+
+function geraRand(max, min){
+    let valr = Math.floor(Math.random() * (20 - 1 + 1) + 1)
+    return valr
+}
+
+function coloca(){
+    for(let j=arr.length; j>0; j--){
+        for(let i=0; i < arr.length-1; i++){
+            arr[i] = geraRand(20, 1)
+            }
+            console.log(arr)
+    }
+}
+
+coloca()
+
+function ex2(){
+    res2.innerHTML = `Array desordenada: ${arr}`
+    console.log(arr)
+    for(j=arr.length; j>0; j--){
+        for(i=0; i < arr.length-1; i++){
+            if(arr[i] < arr[i+1]){
+                aux = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = aux
+            }
+            console.log(arr)
+        }
+    }
+    res22.innerHTML = `Array ordenada: ${arr}`
+}                    
+                </pre>
+            </code>
+            <code>
+                <pre id="res2"></pre>
+                <pre id="res22"></pre>
+            </code>
+        </section>
+
+        <br>
+
+        <section id="questProva3" class="programacao">
+            <h2>Prova - questão 3</h2>
+            <div class="buttons">
+                <button onclick="ex3()">Calcular</button>
+                <button onclick="mostra3()">Mostrar Código</button>
+            </div>
+            <code id="aparece3">
+                <pre>
+
+                </pre>
+            </code>
+            <code>
+                <pre id="res3"></pre>
+                <pre id="res33"></pre>
+            </code>
+        </section>
+
+        <br>
+
+        <section id="selectionSortSec" class="programacao">
+            <h2>Selection Sort</h2>
+                <button onclick="selectionSort()">Calcular</button>
+                <button onclick="mostra4()">Mostrar Código</button>
+            </div>
+            <code id="aparece4">
+                <pre>
+let res4 = document.getElementById('res4');
+let res44 = document.getElementById('res44');
+
+aparece4.style.display = 'none'
+
+function mostra4(){
+    aparece4.style.display = 'flex'
+}
+
+function geraRand(max, min) {
+    let valr = Math.floor(Math.random() * (20 - 1 + 1) + 1);
+    return valr;
+}
+
+let arr4 = [0, 0, 0, 0, 0, 0, 0];
+
+function preencheArray() {
+    for (let i = 0; i < arr4.length; i++) {
+        arr4[i] = geraRand(20, 1);
+    }
+    console.log(arr4);
+}
+
+preencheArray();
+
+function selectionSort() {
+    res4.innerHTML = `Array desordenada: ${arr4}`;
+    console.log(arr4);
+
+    for (let i = 0; i < arr4.length - 1; i++) {
+        let minI = i;
+        
+        for (let j = i + 1; j < arr4.length; j++) {
+            if (arr4[j] < arr4[minI]) {
+                minI = j;
+            }
+        }
+        
+        if (minI !== i) {
+            let temp = arr4[i];
+            arr4[i] = arr4[minI];
+            arr4[minI] = temp;
+        }
+
+        console.log(`Iteração ${i + 1}: ${arr4}`);
+    }
+
+    res44.innerHTML = `Array ordenada: ${arr4}`;
+    console.log(arr4);
+}                    
+                </pre>
+            </code>
+            <code>
+                <pre id="res4"></pre>
+                <pre id="res44"></pre>
+            </code>
+        </section>
+
+        <br>
+
+        <section id="inserctionSortSec" class="programacao">
+            <h2>Inserction Sort</h2>
+                <button onclick="insertionSort()">Calcular</button>
+                <button onclick="mostra5()">Mostrar Código</button>
+            </div>
+            <code id="aparece5">
+                <pre>
+let res5 = document.getElementById('res5');
+let res55 = document.getElementById('res55');
+
+aparece5.style.display = 'none'
+
+function mostra5(){
+    aparece5.style.display = 'flex'
+}
+
+function geraRand(max, min) {
+    let valr = Math.floor(Math.random() * (20 - 1 + 1) + 1);
+    return valr;
+}
+
+let arr2 = [0, 0, 0, 0, 0, 0, 0];
+
+function preencheArray() {
+    for (let i = 0; i < arr2.length; i++) {
+        arr2[i] = geraRand(20, 1);
+    }
+    console.log(arr2);
+}
+
+preencheArray();
+
+function insertionSort() {
+    res5.innerHTML = `Array desordenada: ${arr2}`;
+    console.log(`Array desordenada: ${arr2}`);
+
+    for (let i = 1; i < arr2.length; i++) {
+        let chave = arr2[i];
+        let j = i - 1;
+
+        while (j >= 0 && arr2[j] > chave) {
+            arr2[j + 1] = arr2[j];
+            j--;
+        }
+        arr2[j + 1] = chave;
+        console.log(`Iteração ${i}: ${arr2}`);
+    }
+
+    res55.innerHTML = `Array ordenada: ${arr2}`;
+    console.log(`Array ordenada: ${arr2}`);
+}
+                </pre>
+            </code>
+            <code>
+                <pre id="res5"></pre>
+                <pre id="res55"></pre>
+            </code>
+        </section>
+
+        <br>
+
+        <section id="exVotoSec" class="programacao">
+            <h2>Verificador de voto</h2>
+                <button onclick="ex6()">Calcular</button>
+                <button onclick="mostra6()">Mostrar Código</button>
+                <div id="code6"></div>
+            </div>
+            <code id="aparece6">
+                <pre>
+let res6 = document.getElementById('res6')
+let res66 = document.getElementById('res66')
+let code6 = document.getElementById('code6')
+
+let input = document.createElement('input')
+input.setAttribute("id", "idade");  
+
+aparece6.style.display = 'none'
+
+function mostra6(){
+    aparece6.style.display = 'flex'
+}
+
+function ex6(){
+    let idade = Number(document.getElementById('idade').value)
+
+    if (idade < 16){
+        res6.innerHTML = "O usuario tem " + idade + " anos de idade, ou seja, não pode votar!"
+    }
+    else if ((idade >= 16) && (idade < 18)){
+        res6.innerHTML = "O usuario tem " + idade + " anos de idade, ou seja, o voto é facultativo!"
+    }
+    else if ((idade >= 18) && (idade < 70)){
+        res6.innerHTML = "O usuario tem " + idade + " anos de idade, ou seja, o voto é obrigatório!"
+    }
+    else if (idade <= -1){
+        res6.innerHTML = "Idade inválida"
+    }
+
+}
+                </pre>
+            </code>
+            <code>
+                <pre id="res6"></pre>
+            </code>
+        </section>
+        <br>
+        <section>
+            <h1>Ordenação por SELECTION SORT - O que é?</h1><br>
+            <iframe src="apresentacao.mp4" frameborder="0"></iframe>
+        </section>
+        <footer class="rp">
+            <p class="texrp">© 2024 Prim Dev. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+</body>
+</html>

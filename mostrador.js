@@ -1,0 +1,6 @@
+let aparece = document.getElementById('aparece')
+let aparece2 = document.getElementById('aparece2')
+let aparece3 = document.getElementById('aparece3')
+let aparece4 = document.getElementById('aparece4')
+let aparece5 = document.getElementById('aparece5')
+let aparece6 = document.getElementById('aparece6')

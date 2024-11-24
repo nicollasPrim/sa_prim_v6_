@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: #FFDD00; /* Cor de fundo vibrante */
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #FF5733;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header img.logo {
+    width: 120px;
+    animation: bounce 1s infinite alternate;
+}
+
+nav.menu {
+    display: flex;
+    gap: 20px;
+}
+
+nav.menu a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+nav.menu a:hover {
+    color: #FFDD00;
+    transform: scale(1.2);
+}
+
+/* Efeito de animação nas letras */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    background-color: #FFF;
+    height: 4px;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.introducao {
+    margin-top: 100px;
+    padding: 40px;
+    background: #FF6F61;
+    color: #fff;
+    font-size: 24px;
+    animation: fadeIn 2s ease;
+}
+
+.introducao h1 {
+    font-size: 3rem;
+    animation: zoomIn 2s ease;
+}
+
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Efeito de transição de texto */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+
+/* Media Query para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    nav.menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #FF5733;
+        text-align: center;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav.menu.active {
+        display: flex;
+    }
+
+    nav.menu a {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}
